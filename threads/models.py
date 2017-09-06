@@ -22,6 +22,9 @@ class Thread(models.Model):
     subject = models.ForeignKey(Subject, related_name="threads")
     created_at = models.DateTimeField(default=timezone.now)
 
+    def __unicode__(self):
+        return self.name
+
 
 class Post(models.Model):
     thread = models.ForeignKey(Thread, related_name="posts")

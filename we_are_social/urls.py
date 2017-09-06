@@ -17,6 +17,8 @@ from django.conf.urls import url, include
 from django.contrib import admin
 from paypal.standard.ipn import urls as paypal_urls
 from django.conf import settings
+from django.conf.urls.static import static
+from django.views.static import serve
 from hello import views as hello_views
 from accounts import views as accounts_views
 from paypal_store import views as paypal_views
@@ -46,9 +48,11 @@ urlpatterns = [
     url(r"^thread/(?P<thread_id>\d+)/$", forum_views.thread, name="thread"),
     url(r"^post/new/(?P<thread_id>\d+)/$", forum_views.new_post, name="new_post"),
     url(r"^post/edit/(?P<thread_id>\d+)/(?P<post_id>\d+)/$", forum_views.edit_post, name="edit_post"),
-    url(r"^post/delete/(?P<thread_id>\d+)/(?P<post_id>\d+)/$", forum_views.delete_post, name="delete_post")
+    url(r"^post/delete/(?P<thread_id>\d+)/(?P<post_id>\d+)/$", forum_views.delete_post, name="delete_post"),
+    url(r"^thread/vote/(?P<thread_id>\d+)/(?P<subject_id>\d+)/$", forum_views.thread_vote, name="cast_vote")
 ]
 
 if settings.DEBUG:
     import debug_toolbar
     urlpatterns.append(url(r"^debug/", include(debug_toolbar.urls)))
+    urlpatterns.append(url(r'^media/(?P<path>.*)$', serve, {"document_root": settings.MEDIA_ROOT}))
