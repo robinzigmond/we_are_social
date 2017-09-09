@@ -22,4 +22,5 @@ six==1.10.0
 sqlparse==0.2.3
 stripe==1.62.1
 urllib3==1.22
+whitenoise==3.2
 git+https://github.com/robinzigmond/reusable_blog_app.git
