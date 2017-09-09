@@ -18,5 +18,5 @@ STRIPE_SECRET = os.getenv("STRIPE_SECRET", "sk_test_hSOzgeTqJC6jlTq12c3L9Gdq")
 # PayPal Settings:
 SITE_URL = "http://127.0.0.1:8000"
 if DEBUG:
-    PAYPAL_NOTIFY_URL = "http://d9cf6692.ngrok.io/a-very-hard-to-guess-url/"
+    PAYPAL_NOTIFY_URL = "http://rz-we-are-social-staging.herokuapp.com/a-very-hard-to-guess-url/"
 PAYPAL_RECEIVER_EMAIL = "robinzigmond@gmail.com"

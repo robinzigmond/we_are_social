@@ -6,7 +6,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = '&vw3u%x+8*jc*h-#n2=_!5jl99#ho+@s-8ktpuqq7g16bmq2f)'
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ["rz-we-are-social-staging.herokuapp.com", "127.0.0.1"]
 
 # required for flatpages
 # SITE_ID = 4
