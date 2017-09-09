@@ -1,0 +1,52 @@
+[
+{
+    "model": "polls.poll",
+    "pk": 4,
+    "fields": {
+        "question": "Your favourite programming language",
+        "thread": 6
+    }
+},
+{
+    "model": "polls.pollsubject",
+    "pk": 10,
+    "fields": {
+        "name": "Javascript",
+        "poll": 4
+    }
+},
+{
+    "model": "polls.pollsubject",
+    "pk": 11,
+    "fields": {
+        "name": "Python",
+        "poll": 4
+    }
+},
+{
+    "model": "polls.pollsubject",
+    "pk": 12,
+    "fields": {
+        "name": "something else",
+        "poll": 4
+    }
+},
+{
+    "model": "polls.vote",
+    "pk": 1,
+    "fields": {
+        "poll": 4,
+        "subject": 10,
+        "user": 1
+    }
+},
+{
+    "model": "polls.vote",
+    "pk": 2,
+    "fields": {
+        "poll": 4,
+        "subject": 12,
+        "user": 10
+    }
+}
+]
