@@ -32,6 +32,5 @@ STRIPE_SECRET = os.getenv("STRIPE_SECRET", "sk_test_hSOzgeTqJC6jlTq12c3L9Gdq")
 
 # PayPal Settings:
 SITE_URL = "https://rz-we-are-social-staging.herokuapp.com/"
-if DEBUG:
-    PAYPAL_NOTIFY_URL = "http://rz-we-are-social-staging.herokuapp.com/a-very-hard-to-guess-url/"
+PAYPAL_NOTIFY_URL = "http://rz-we-are-social-staging.herokuapp.com/a-very-hard-to-guess-url/"
 PAYPAL_RECEIVER_EMAIL = "robinzigmond@gmail.com"
